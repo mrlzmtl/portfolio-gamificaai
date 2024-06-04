@@ -1,10 +1,18 @@
-import { Actor, Color, Engine, Font, Label, Scene, TextAlign, vec } from "excalibur";
+import { Actor, Color, Engine, FadeInOut, Font, Keys, Label, Scene, TextAlign, Transition, vec } from "excalibur";
 import { Resources } from "../resources";
 
 
 export class welcomeScene extends Scene {
+    onTransition(direction: "in" | "out"): Transition | undefined {
+        return new FadeInOut({
+            direction: direction,
+            color: Color.Black,
+            duration: 1000
+        })
+    }
+
     onInitialize(engine: Engine<any>): void {
-        this.backgroundColor = Color.Gray
+        this.backgroundColor = Color.Black
 
         let fraseBemVindo = new Label({
             text: "Bem vindo ao portfólio",
@@ -52,5 +60,11 @@ export class welcomeScene extends Scene {
         })
 
         this.add(textoIniciar)
+
+        this.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.Enter) {
+                engine.goToScene("historia")
+            }
+        })
     }
 }
