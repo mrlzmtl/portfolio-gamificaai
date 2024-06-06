@@ -18,8 +18,8 @@ body {
 }
 
 .sobre-gamifica{
-  width: 500px;
-  height: 600px;
+  width: 400px;
+  height: 500px;
 
   padding: 40px;
 
@@ -44,6 +44,39 @@ body {
 }
 
 .sobre-gamifica p{
+  font-size: 16px;
+  text-align: justify;
+
+  line-height: 2;
+}
+
+.gamificar{
+  width: 400px;
+  height: 500px;
+
+  padding: 40px;
+
+  background-color: #fff;
+
+  border: solid 15px #cf5830;
+  border-radius: 30px;
+
+  color: black;
+  font-family: "Anta";
+
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.gamificar h2{
+  margin-bottom: 40px;
+
+  font-size: 30px;
+  text-align: center;
+}
+
+.gamificar p{
   font-size: 16px;
   text-align: justify;
 
