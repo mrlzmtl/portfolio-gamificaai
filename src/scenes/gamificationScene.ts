@@ -9,11 +9,11 @@ export class gamificationScene extends Scene {
 
         setInterval(() => {
             if (opacidade > 0) {
-                opacidade = opacidade - 0.1
+                opacidade = opacidade - 0.01
 
                 elemento.style.opacity = opacidade.toString()
             }
-        }, 20)
+        }, 10)
     }
 
     onTransition(direction: "in" | "out"): Transition | undefined {
@@ -61,7 +61,7 @@ export class gamificationScene extends Scene {
             if (event.key == Keys.Enter) {
                 this.fadeOutElementG(this.elementoGamificacao!)
 
-                engine.goToScene("")
+                engine.goToScene("exposicao")
             }
         })
     }
