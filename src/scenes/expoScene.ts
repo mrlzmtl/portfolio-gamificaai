@@ -38,8 +38,7 @@ export class expoScene extends Scene {
                 y: objeto.y + offsetY + (objeto.tiledObject.height! / 2),
                 width: objeto.tiledObject.width,
                 height: objeto.tiledObject.height,
-                collisionType: CollisionType.Fixed,
-                color: Color.Blue
+                collisionType: CollisionType.Fixed
             })
 
             this.add(objetoAtual)
