@@ -187,25 +187,25 @@
 </data>
  </layer>
  <objectgroup id="9" name="ObjetosColisores">
-  <object id="3" name="mesa_sinuca" x="559.971" y="401.693" width="96.0435" height="74.3277"/>
-  <object id="4" name="mesa_stand_b" x="426.008" y="239.999" width="76.0033" height="41.9972"/>
-  <object id="5" name="mesa_stand_a" x="202.004" y="240.25" width="75.9847" height="41.7502"/>
+  <object id="3" name="mesa_sinuca" x="559.971" y="415.966" width="96.0435" height="60.055"/>
+  <object id="4" name="mesa_stand_b" x="426.008" y="249.272" width="76.0033" height="32.7245"/>
+  <object id="5" name="mesa_stand_a" x="202.004" y="249.341" width="75.9847" height="32.6593"/>
   <object id="7" name="rack_tv" x="100" y="384" width="19.9861" height="56"/>
   <object id="8" name="sofa_tv" x="209.988" y="380" width="44.0128" height="65.997"/>
-  <object id="9" name="mesa_stand_c" x="650" y="240.251" width="76.0011" height="41.7472"/>
+  <object id="9" name="mesa_stand_c" x="650" y="249.251" width="76.0011" height="32.7472"/>
   <object id="10" name="computador_a" x="138" y="234" width="43.9922" height="50.0039"/>
   <object id="11" name="computador_b" x="362" y="233.994" width="43.9922" height="50.0039"/>
   <object id="12" name="computador_c" x="586.018" y="234.017" width="43.9922" height="50.0039"/>
-  <object id="13" name="gaveteiro_a" x="290" y="240.007" width="28.0004" height="35.9862"/>
-  <object id="14" name="gaveteiro_b" x="514" y="240" width="28.0004" height="35.9862"/>
-  <object id="15" name="gaveteiro_c" x="738.008" y="240.004" width="28.0004" height="35.9862"/>
-  <object id="16" name="cadeira_c" x="671.995" y="169.962" width="32.0056" height="46"/>
-  <object id="17" name="cadeira_b" x="447.999" y="170.216" width="31.9989" height="45.75"/>
-  <object id="18" name="cadeira_a" x="224.004" y="169.5" width="32.0028" height="46.5"/>
-  <object id="21" name="puff_a" x="780.006" y="447.995" width="40.0039" height="46.0279"/>
+  <object id="13" name="gaveteiro_a" x="290" y="248.007" width="28.0004" height="27.9862"/>
+  <object id="14" name="gaveteiro_b" x="514" y="248" width="28.0004" height="27.9862"/>
+  <object id="15" name="gaveteiro_c" x="738.008" y="247.961" width="28.0004" height="28.0297"/>
+  <object id="16" name="cadeira_c" x="671.995" y="177.962" width="32.0056" height="38"/>
+  <object id="17" name="cadeira_b" x="447.999" y="178.125" width="31.9989" height="37.8409"/>
+  <object id="18" name="cadeira_a" x="224.004" y="178.136" width="32.0028" height="37.8636"/>
+  <object id="21" name="puff_a" x="780.006" y="456.038" width="40.0039" height="37.9844"/>
   <object id="22" name="vaso_a" x="102.004" y="119.992" width="19.9922" height="22.0117"/>
   <object id="23" name="vaso_b" x="806.004" y="120.006" width="19.9961" height="21.9937"/>
-  <object id="24" name="puff_b" x="779.999" y="384.015" width="39.9782" height="45.9732"/>
+  <object id="24" name="puff_b" x="779.999" y="392.102" width="39.9782" height="37.8862"/>
  </objectgroup>
  <layer id="8" name="BlocosColisores" width="29" height="20" opacity="0" offsetx="138" offsety="100">
   <properties>
