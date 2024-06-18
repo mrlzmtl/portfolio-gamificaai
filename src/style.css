@@ -82,3 +82,36 @@ body {
 
   line-height: 2;
 }
+
+.case{
+  width: 400px;
+  height: 500px;
+
+  padding: 40px;
+
+  background-color: #fff;
+
+  border: solid 15px #cf5830;
+  border-radius: 30px;
+
+  color: black;
+  font-family: "Anta";
+
+  position: absolute;
+  top: 10%;
+  right: 5%;
+}
+
+.case h2{
+  margin-bottom: 40px;
+
+  font-size: 30px;
+  text-align: center;
+}
+
+.case p{
+  font-size: 16px;
+  text-align: justify;
+
+  line-height: 2;
+}

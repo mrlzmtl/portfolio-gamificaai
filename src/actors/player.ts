@@ -93,7 +93,7 @@ export class Player extends Actor{
 
         this.graphics.add("up-idle", upIdle)
 
-        this.graphics.use("down-idle    ")
+        this.graphics.use("down-idle")
 
         const leftWalk = new Animation({
             frames: [
@@ -211,8 +211,38 @@ export class Player extends Actor{
                 this.graphics.use(this.ultimaDirecao + "-idle")
             }
         })
-    }
 
+        engine.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.F && this.temObjetoProximo) {
+                if (this.ultimoColisor?.owner.name == "mesa_stand_a") {
+                    console.log("Essa é a mesa a")
+                    engine.goToScene("case", {
+                        sceneActivationData: {
+                            nomeDoActor: this.ultimoColisor?.owner.name
+                        }
+                    })
+                }
+                if (this.ultimoColisor?.owner.name == "mesa_stand_b") {
+                    console.log("Essa é a mesa b")
+                    engine.goToScene("case", {
+                        sceneActivationData: {
+                            nomeDoActor: this.ultimoColisor?.owner.name
+                        }
+                    })
+                }
+                if (this.ultimoColisor?.owner.name == "mesa_stand_c") {
+                    console.log("Essa é a mesa c")
+                    engine.goToScene("case", {
+                        sceneActivationData: {
+                            nomeDoActor: this.ultimoColisor?.owner.name
+                        }
+                    })
+                }
+                
+            }
+        })
+    }
+    
     onPreCollisionResolve(self: Collider, other: Collider, side: Side, contact: CollisionContact): void {
         this.temObjetoProximo = true
 
@@ -222,9 +252,6 @@ export class Player extends Actor{
     onPreUpdate(engine: Engine<any>, delta: number): void {
         if (this.ultimoColisor && this.pos.distance(this.ultimoColisor.worldPos) > 45) {
             this.temObjetoProximo = false
-
-            console.log("Está longe");
-            
         }
     }
 }

@@ -43,7 +43,7 @@ export class gamificationScene extends Scene {
         Esta abordagem se utiliza de componentes como pontuação, 
         níveis, recompensas, desafios, e feedback imediato, visando 
         promover comportamentos desejados e aumentar a participação e o 
-        comprometimento dos participantes.`
+        comprometimento dos participantes.<p>`
 
         let actorGamificacao = new Actor({
             pos: vec(engine.halfDrawWidth / 2, engine.halfDrawHeight)

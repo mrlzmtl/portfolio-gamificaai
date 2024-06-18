@@ -15,6 +15,11 @@ export class expoScene extends Scene {
     onInitialize(engine: Engine<any>): void {
         engine.toggleDebug()
 
+        let musicaFundo = Resources.RitmadaBGM
+
+        musicaFundo.loop = true
+        musicaFundo.play(0.5)
+
         let tiledMap = Resources.Mapa
 
         let offsetX = 138
