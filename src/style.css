@@ -83,7 +83,7 @@ body {
   line-height: 2;
 }
 
-.case{
+.texto-case{
   width: 400px;
   height: 500px;
 
@@ -99,17 +99,17 @@ body {
 
   position: absolute;
   top: 10%;
-  right: 5%;
+  left: 5%;
 }
 
-.case h2{
+.texto-case h2{
   margin-bottom: 40px;
 
   font-size: 30px;
   text-align: center;
 }
 
-.case p{
+.texto-case p{
   font-size: 16px;
   text-align: justify;
 

@@ -1,126 +1,90 @@
-import { Actor, Color, Engine, FadeInOut, Keys, Scene, SceneActivationContext, Transition, vec } from "excalibur";
+import { Actor, Color, Engine, FadeInOut,  Keys,  Scene, SceneActivationContext, Sprite, Transition, vec } from "excalibur";
 import { Resources } from "../resources";
 
-export class caseScene extends Scene {
-    caseMesa?: HTMLElement
 
+export class caseScene extends Scene {
     private objetoInteracao: any
 
-    fadeOutElementG(elemento: HTMLElement) {
-        let opacidade = parseFloat(elemento.style.opacity)
+    private actorNpc?: Actor
+    private listaImagens?: Sprite[]
 
-        setInterval(() => {
-            if (opacidade > 0) {
-                opacidade = opacidade - 0.01
-
-                elemento.style.opacity = opacidade.toString()
-            }
-        }, 10)
-    }
+    elementotexto?: HTMLElement
 
     onTransition(direction: "in" | "out"): Transition | undefined {
         return new FadeInOut({
             direction: direction,
             color: Color.Black,
-            duration: 500
+            duration: 1000
         })
     }
 
     onInitialize(engine: Engine<any>): void {
         this.backgroundColor = Color.Gray
 
-        this.input.keyboard.on("press", (event) => {
-            if (event.key == Keys.F) {
-                this.fadeOutElementG(this.caseMesa!)
+        this.elementotexto = document.createElement("div") as HTMLElement
+        this.elementotexto.classList.add("texto-case")
 
-                this.engine.goToScene("exposicao")
+        let containerGame = document.querySelector(".container-game")
+        containerGame?.appendChild(this.elementotexto)
+
+        this.input.keyboard.on("press", (event) => {
+            if (event.key == Keys.Esc) {
+                engine.goToScene("exposicao")
             }
         })
+
+        this.actorNpc = new Actor({
+            pos: vec(engine.drawWidth - 300, engine.halfDrawHeight - 50)
+        })
+
+        let imagemNpcA = Resources.NpcA.toSprite()
+        let imagemNpcB = Resources.NpcB.toSprite()
+        let imagemNpcC = Resources.NpcC.toSprite()
+
+        this.listaImagens = [imagemNpcA, imagemNpcB, imagemNpcC]
     }
     
     onActivate(context: SceneActivationContext<unknown>): void {
+        this.elementotexto!.style.opacity = "1"
+
         this.objetoInteracao = context.data
         
         console.log(this.objetoInteracao);
 
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_a") {
-            this.caseMesa = document.createElement("div") as HTMLElement
-        
-            this.caseMesa.style.opacity = "1"
-        
-            let containerCase = document.querySelector(".container-game") as HTMLElement
-            containerCase.appendChild(this.caseMesa)
-        
-            this.caseMesa.classList.add("case")
-        
-            this.caseMesa.innerHTML = `<h2>Case A</h2>
-            <p>Case da mesa a<p>`
+            this.elementotexto!.innerHTML = `<h2>Case a<h2>
+            <p>Descrição do case a<p>
+            <p>Descrição do case XYZ Tech Solutions<p>`
 
-            let actorNpcA = new Actor({
-                pos: vec(this.engine.halfDrawWidth / 2, this.engine.halfDrawHeight)
-            })
-    
-            let imagemNpcA = Resources.NpcA.toSprite()
-    
-            imagemNpcA.scale = vec(1.7, 1.7)
-    
-            actorNpcA.graphics.add(imagemNpcA)
-    
-            this.add(actorNpcA)
+            this.actorNpc?.graphics.add(this.listaImagens![0])
+
+            this.actorNpc!.graphics.current!.scale = vec(2.3, 2.3)
         }
 
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_b") {
-            this.caseMesa = document.createElement("div") as HTMLElement
-        
-            this.caseMesa.style.opacity = "1"
-        
-            let containerCase = document.querySelector(".container-game") as HTMLElement
-            containerCase.appendChild(this.caseMesa)
-        
-            this.caseMesa.classList.add("case")
-        
-            this.caseMesa.innerHTML = `<h2>Case B</h2>
-            <p>Case da mesa b<p>`
+            this.elementotexto!.innerHTML = `<h2>Case b<h2>
+            <p>Descrição do case b<p>
+            <p>Descrição do case ABC Finance<p>`
 
-            let actorNpcB = new Actor({
-                pos: vec(this.engine.halfDrawWidth / 2, this.engine.halfDrawHeight)
-            })
-    
-            let imagemNpcB = Resources.NpcB.toSprite()
-    
-            imagemNpcB.scale = vec(1.7, 1.7)
-    
-            actorNpcB.graphics.add(imagemNpcB)
-    
-            this.add(actorNpcB)
+            this.actorNpc?.graphics.add(this.listaImagens![1])
+
+            this.actorNpc!.graphics.current!.scale = vec(2.3, 2.3)
         }
         
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_c") {
-            this.caseMesa = document.createElement("div") as HTMLElement
-        
-            this.caseMesa.style.opacity = "1"
-        
-            let containerCase = document.querySelector(".container-game") as HTMLElement
-            containerCase.appendChild(this.caseMesa)
-        
-            this.caseMesa.classList.add("case")
-        
-            this.caseMesa.innerHTML = `<h2>Case C</h2>
-            <p>Case da mesa c<p>`
+            this.elementotexto!.innerHTML = `<h2>Case c<h2>
+            <p>Descrição do case c<p>
+            <p>Descrição do case FastMart<p>`
 
-            let actorNpcC = new Actor({
-                pos: vec(this.engine.halfDrawWidth / 2, this.engine.halfDrawHeight)
-            })
-    
-            let imagemNpcC = Resources.NpcC.toSprite()
-    
-            imagemNpcC.scale = vec(1.7, 1.7)
-    
-            actorNpcC.graphics.add(imagemNpcC)
-    
-            this.add(actorNpcC)
+            this.actorNpc?.graphics.add(this.listaImagens![2])
+
+            this.actorNpc!.graphics.current!.scale = vec(2.3, 2.3)
         }
-        
-        
+
+        this.add(this.actorNpc!)
+    }
+
+    onDeactivate(context: SceneActivationContext<undefined>): void {
+        this.elementotexto!.style.opacity = "0"
     }
 }
