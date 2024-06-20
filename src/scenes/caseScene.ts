@@ -52,9 +52,10 @@ export class caseScene extends Scene {
         console.log(this.objetoInteracao);
 
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_a") {
-            this.elementotexto!.innerHTML = `<h2>Case a<h2>
-            <p>Descrição do case a<p>
-            <p>Descrição do case XYZ Tech Solutions<p>`
+            this.elementotexto!.innerHTML = `<h2>XYZ Tech - Transformação Digital e Capacitação na Tecnologia</h2>
+            <p>A empresa enfrentava dificuldades na adoção de novas tecnologias pelos funcionários, resultando em baixa eficiência e resistência às mudanças.</p>
+            <p>A XYZ Tech Solutions implementou uma plataforma de treinamento gamificada, onde os funcionários ganhavam pontos e badges ao completar módulos de treinamento sobre novas tecnologias. Eles podiam ver seu progresso em um leaderboard, incentivando uma competição saudável.</p>            
+            `
 
             this.actorNpc?.graphics.add(this.listaImagens![0])
 
@@ -62,9 +63,10 @@ export class caseScene extends Scene {
         }
 
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_b") {
-            this.elementotexto!.innerHTML = `<h2>Case b<h2>
-            <p>Descrição do case b<p>
-            <p>Descrição do case ABC Finance<p>`
+            this.elementotexto!.innerHTML = `<h2>ABC Finance - Incentivo à Cultura de Inovação</h2>
+            <p>A empresa queria incentivar os funcionários a proporem ideias inovadoras para melhorar processos e produtos, mas havia pouca participação.
+            <p>ABC Finance criou um programa chamado "InovaABC" onde os funcionários podiam submeter ideias e ganhar pontos. As ideias eram votadas pelos colegas e avaliadas por um comitê. Os funcionários com as melhores ideias ganhavam prêmios e reconhecimento trimestral.
+            `
 
             this.actorNpc?.graphics.add(this.listaImagens![1])
 
@@ -72,9 +74,10 @@ export class caseScene extends Scene {
         }
         
         if (this.objetoInteracao.nomeDoActor == "mesa_stand_c") {
-            this.elementotexto!.innerHTML = `<h2>Case c<h2>
-            <p>Descrição do case c<p>
-            <p>Descrição do case FastMart<p>`
+            this.elementotexto!.innerHTML = `<h2>FastMart - Melhoria na Experiência do Cliente</h2>
+            <p>A empresa de varejo enfrentava problemas com o atendimento ao cliente, resultando em baixa satisfação e retenção de clientes.
+            <p>FastMart lançou uma aplicação interna onde os atendentes ganhavam pontos ao fornecer um excelente atendimento ao cliente, baseado em avaliações dos próprios clientes e supervisores. Os melhores atendentes eram destacados no mural da empresa e recebiam recompensas.
+            `
 
             this.actorNpc?.graphics.add(this.listaImagens![2])
 

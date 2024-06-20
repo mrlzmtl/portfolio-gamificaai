@@ -17,6 +17,10 @@ import tmxMapaPath from "./maps/showroom_map.tmx?url"
 
 import playerSpritePath from "./sprites/player.png"
 
+import npcASpriteSheet from "./sprites/npc_a.png"
+import npcBSpriteSheet from "./sprites/npc_b.png"
+import npcCSpriteSheet from "./sprites/npc_c.png"
+
 import ritmada from "./sounds/ritmada_zelda.mp3"
 import classico from "./sounds/zelda.mp3"
 
@@ -44,7 +48,10 @@ export const Resources = {
   }),
   NpcA: new ImageSource(npcA),
   NpcB: new ImageSource(npcB),
-  NpcC: new ImageSource(npcC)
+  NpcC: new ImageSource(npcC),
+  NpcASpriteSheet: new ImageSource(npcASpriteSheet),
+  NpcBSpriteSheet: new ImageSource(npcBSpriteSheet),
+  NpcCSpriteSheet: new ImageSource(npcCSpriteSheet)
 } as const;
 
 export const loader = new Loader();
